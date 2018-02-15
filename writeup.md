@@ -30,7 +30,8 @@ Following chart shows the distribution of images in different classes in trainin
 
 Following are few random images from the training dataset:
 
-<img  align="left" src="exp/trainingImages.png" alt="image"/>
+<img src="exp/trainingImages.png" alt="image"/>
+<br>
 
 It can be observed in the images that there is no useful information near the edges. Images in the dataset are taken in different lighting conditions. Number of rotated images is negligible. Most of the images are not rotated or tilted, except a few which are slightly rotated or tilted, but shouldn't make any difference.
 
@@ -47,11 +48,11 @@ The model architecture consists of the following components:
 Dataset consists of 32x32 pixels RGB images of German traffic signs. Shape of the images in this case is more important than the color. So, even if images are taken in different lighting conditions, shape can still match. So, following pre-processing is done on the source images:
 * Convert to grayscale (32x32) and reshape to 32x32x1
 * Normalize the image using the following formula:
-    \begin{equation*} pixel = \frac{(pixel - 128)}{128} \end{equation*}
+    pixel = (pixel - 128)/128
 * Shuffle the data set before each epoch
 
 Following is the snapshot of an image before and after grayscaling:
-<table align="left">
+<table>
 <tr>
     <td><img src="exp/img_original.png", alt="Original Image"/></td>
     <td><img src="exp/img_grayscale.png", alt="Grayscale Image"/></td>
@@ -64,7 +65,7 @@ Shuffling the data helps in randomising the training process each time when mode
 
 The model consists of the following layers:
 
-<table align="left" style="border:1px solid #cccccc">
+<table style="border:1px solid #cccccc">
 <thead>
     <tr style="border-bottom:1px solid #cccccc">
         <th style="text-align:center;border-right:1px solid #cccccc">Layer</th>
@@ -168,7 +169,7 @@ These modifications worked well and along with precise choice of other hyperpara
 
 Here are five German traffic signs that I found on the web:
 
-<table align="left">
+<table>
     <tr>
         <td style="text-align:center">
             <img src="test_images/img1.jpg", alt="Original Image" style="height:200px;width:200px"/>
@@ -205,7 +206,7 @@ _Image4_ and _Image5_ might be difficult to classify because _Image4_ is blur an
 ### Predictions by Model on New Images
 
 Here are the results of prediction on the new images:
-<table align="left" style="border:1px solid #cccccc">
+<table style="border:1px solid #cccccc">
     <thead>
         <tr style="border-bottom:1px solid #cccccc">
             <th style="text-align:center;border-right:1px solid #cccccc">Image</th>
@@ -241,7 +242,7 @@ The model was able to correctly classify 3 of the 5 traffic signs, which gives a
 ### Output Softmax Probabilities
 
 For the first image, model is absolutely sure that it is a sign for _Right-of-way at the next intersection_ and it is correct. The top five probabilities were:
-<table align="left" style="border:1px solid #cccccc">
+<table style="border:1px solid #cccccc">
     <thead>
         <tr style="border-bottom:1px solid #cccccc">
             <th style="text-align:center;border-right:1px solid #cccccc;width:280px">Prediction</th>
@@ -273,7 +274,7 @@ For the first image, model is absolutely sure that it is a sign for _Right-of-wa
 </table>
 
 For the second image, model predicted it incorrectly as _General caution_ sign, but it is _Pedestrians_ sign. The top five probabilities were:
-<table align="left" style="border:1px solid #cccccc">
+<table style="border:1px solid #cccccc">
     <thead>
         <tr style="border-bottom:1px solid #cccccc">
             <th style="text-align:center;border-right:1px solid #cccccc;width:280px">Prediction</th>
@@ -305,7 +306,7 @@ For the second image, model predicted it incorrectly as _General caution_ sign, 
 </table>
 
 For third image also, model is absolutely sure that it is _Children crossing_ sign which is correct. The top five probabilities were:
-<table align="left" style="border:1px solid #cccccc">
+<table style="border:1px solid #cccccc">
     <thead>
         <tr style="border-bottom:1px solid #cccccc">
             <th style="text-align:center;border-right:1px solid #cccccc;width:280px">Prediction</th>
@@ -337,7 +338,7 @@ For third image also, model is absolutely sure that it is _Children crossing_ si
 </table>
 
 For fourth image, model is sure that it is _Turn right ahead_ sign which is correct. The top five probabilities were:
-<table align="left" style="border:1px solid #cccccc">
+<table style="border:1px solid #cccccc">
     <thead>
         <tr style="border-bottom:1px solid #cccccc">
             <th style="text-align:center;border-right:1px solid #cccccc;width:280px">Prediction</th>
@@ -369,7 +370,7 @@ For fourth image, model is sure that it is _Turn right ahead_ sign which is corr
 </table>
 
 For fifth image, model is totally confused and ends up predicting it as _Go straight or left_ sign, which is incorrect. This is because this image is rotated and there is no image in data set with such angel of rotation. The top five probabilities are:
-<table align="left" style="border:1px solid #cccccc">
+<table style="border:1px solid #cccccc">
     <thead>
         <tr style="border-bottom:1px solid #cccccc">
             <th style="text-align:center;border-right:1px solid #cccccc;width:280px">Prediction</th>
@@ -450,8 +451,3 @@ On the other hand if we have a look at the image of a sign which was not correct
     </tr>
 </table>
 In above image, it is clear that the features could be confused with many other traffic sign images.
-
-
-```python
-
-```
