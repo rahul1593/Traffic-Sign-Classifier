@@ -31,6 +31,7 @@ Following chart shows the distribution of images in different classes in trainin
 Following are few random images from the training dataset:
 
 <img  align="left" src="exp/trainingImages.png" alt="image"/>
+<br>
 
 It can be observed in the images that there is no useful information near the edges. Images in the dataset are taken in different lighting conditions. Number of rotated images is negligible. Most of the images are not rotated or tilted, except a few which are slightly rotated or tilted, but shouldn't make any difference.
 
