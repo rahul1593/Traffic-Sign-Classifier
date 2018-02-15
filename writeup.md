@@ -47,7 +47,7 @@ The model architecture consists of the following components:
 Dataset consists of 32x32 pixels RGB images of German traffic signs. Shape of the images in this case is more important than the color. So, even if images are taken in different lighting conditions, shape can still match. So, following pre-processing is done on the source images:
 * Convert to grayscale (32x32) and reshape to 32x32x1
 * Normalize the image using the following formula:
-    \begin{equation*} pixel = \frac{(pixel - 128)}{128} \end{equation*}
+    pixel = (pixel - 128)/128
 * Shuffle the data set before each epoch
 
 Following is the snapshot of an image before and after grayscaling:
